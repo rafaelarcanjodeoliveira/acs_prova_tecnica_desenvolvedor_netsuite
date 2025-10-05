@@ -1,0 +1,286 @@
+<workflow scriptid="customworkflow_acs_wf_requisito_1">
+  <description></description>
+  <initcontexts>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|WEBAPPLICATION|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|WEBSTORE|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype>BEFORESUBMIT</inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>ACS | WF Requisito 1</name>
+  <recordtypes>INVOICE</recordtypes>
+  <releasestatus>TESTING</releasestatus>
+  <runasadmin>F</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowcustomfields>
+    <workflowcustomfield scriptid="custworkflow_acs_teste_sem_codigo">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>CHECKBOX</fieldtype>
+      <help></help>
+      <label>Sem Código</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype></selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+    <workflowcustomfield scriptid="custworkflow_tst_banco">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>SELECT</fieldtype>
+      <help></help>
+      <label>Banco</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype>[scriptid=customrecord_tst_banco]</selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+    <workflowcustomfield scriptid="custworkflow_tst_codigo">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>TEXT</fieldtype>
+      <help></help>
+      <label>Código</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype></selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+  </workflowcustomfields>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate174">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Requisito 1</name>
+      <positionx>243</positionx>
+      <positiony>133</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <setfieldvalueaction scriptid="workflowaction727">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_acs_teste_sem_codigo]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>T</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA[isChecked("Subsidiary (Main):Sem Código") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Subsidiary (Main):Sem Código</name>
+                <value>STDBODYSUBSIDIARY:[scriptid=custrecord_tst_sem_codigo]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction728">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_banco]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield>[scriptid=custentity_tst_banco]</valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield>STDBODYCUSTOMER</valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>FIELD</valuetype>
+          <initcondition>
+            <formula><![CDATA[isChecked("Workflow:Sem Código") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Sem Código</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_acs_teste_sem_codigo]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction729">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_codigo]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield>[scriptid=custentity_tst_codigo]</valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield>STDBODYCUSTOMER</valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>FIELD</valuetype>
+          <initcondition>
+            <formula><![CDATA[isChecked("Workflow:Sem Código") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Sem Código</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_acs_teste_sem_codigo]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction732">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=custbody_tst_codigo]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>T</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA[isChecked("Workflow:Banco:Código Promocional") = 'T' AND isEmpty("Workflow:Código") = 'F']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Banco:Código Promocional</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_banco]:[scriptid=customrecord_tst_banco.custrecord_banco_codpromo]</value>
+              </parameter>
+              <parameter>
+                <name>Workflow:Código</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_codigo]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction733">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=custbody_tst_codigo_promocional]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_codigo]</valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>FIELD</valuetype>
+          <initcondition>
+            <formula><![CDATA[isChecked("Workflow:Banco:Código Promocional") = 'T' AND isEmpty("Workflow:Código") = 'F']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Banco:Código Promocional</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_banco]:[scriptid=customrecord_tst_banco.custrecord_banco_codpromo]</value>
+              </parameter>
+              <parameter>
+                <name>Workflow:Código</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_codigo]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+      </workflowactions>
+      <workflowactions triggertype="BEFORESUBMIT">
+        <returnusererroraction scriptid="workflowaction730">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <errortext>O campo banco não está preenchido no registro do cliente!.</errortext>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <initcondition>
+            <formula><![CDATA[isEmpty("Workflow:Banco") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Banco</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_banco]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </returnusererroraction>
+        <returnusererroraction scriptid="workflowaction731">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <errortext>O campo código não está preenchido no registro do cliente!.</errortext>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <initcondition>
+            <formula><![CDATA[isEmpty("Workflow:Código") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:Código</name>
+                <value>[scriptid=customworkflow_acs_wf_requisito_1.custworkflow_tst_codigo]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </returnusererroraction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>
