@@ -18,7 +18,7 @@ Essa abordagem cobre 100% das regras declaradas, reduz complexidade e evita uso 
 
 > **Observação (WorkflowAction Script):**
 > Além do Workflow, também criei um **WorkflowAction Script** para demonstrar que a solução também pode ser feita através de script e implementar como ação diretamente no fluxo.
-> Esse script é identificado no projeto como `acs_wfa_requisito_1.js`.
+> Esse script é identificado no projeto como `acs_wf_requisito_1.js`.
 
 ---
 
@@ -139,7 +139,7 @@ Regras:
 | Item | Tipo | Descrição |
 |------|------|-----------|
 | `acs_wf_requisito_1.xml` | Workflow | Validação Invoice |
-| `acs_wfa_requisito_1.js` | WorkflowAction | Lógica adicional |
+| `acs_wf_requisito_1.js` | WorkflowAction | Lógica adicional |
 | `acs_sl_requisito_2.js` | Suitelet | Tela de aprovação |
 | `acs_mr_requisito_3.js` | Map/Reduce | Resumo e envio de e-mails |
 | `readme.md` | Documentação | Este arquivo |
