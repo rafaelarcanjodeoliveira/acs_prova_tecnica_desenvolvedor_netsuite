@@ -70,7 +70,7 @@ define(['N/search', 'N/error'], (search, error) => {
         });
         const temCodPromo = !!bankData[BANK_FLD_CODPROMO];
 
-        // 6) Se promoção ativa e o cliente tem código preenchido seta valores na fatura
+        // 6) Se promo ativa e cliente tem código → setar flag/cópia no próprio newRecord
         if (temCodPromo) {
             rec.setValue({ fieldId: TXN_FLD_FLAG_CODIGO, value: true });
             rec.setValue({ fieldId: TXN_FLD_COD_PROMO, value: codigo });

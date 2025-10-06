@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_tst_status_aprovacao">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Status Aprovação</name>
+  <customvalues>
+    <customvalue scriptid="val_632577_t1505466_421">
+      <isinactive>F</isinactive>
+      <value>Pendente</value>
+    </customvalue>
+    <customvalue scriptid="val_632578_t1505466_924">
+      <isinactive>F</isinactive>
+      <value>Aprovado</value>
+    </customvalue>
+    <customvalue scriptid="val_632579_t1505466_803">
+      <isinactive>F</isinactive>
+      <value>Rejeitado</value>
+    </customvalue>
+  </customvalues>
+</customlist>

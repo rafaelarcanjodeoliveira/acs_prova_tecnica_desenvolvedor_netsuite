@@ -8,7 +8,7 @@
   <notifyuser>F</notifyuser>
   <returnrecordtype></returnrecordtype>
   <returntype></returntype>
-  <scriptfile>[/SuiteScripts/acs_wf_requisito_1.js]</scriptfile>
+  <scriptfile>[/SuiteScripts/Prova/Requisito 1/acs_wf_requisito_1.js]</scriptfile>
   <scriptdeployments>
     <scriptdeployment scriptid="customdeploy_acs_wf_requisito_1">
       <allemployees>F</allemployees>
